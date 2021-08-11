@@ -11,7 +11,6 @@
                             <router-link tag="a" to="/dien-thoai">
                                 Điện thoại
                             </router-link>
-                            <i class="icon-right fas fa-chevron-right"></i>
                         </li>
                         <li class="list-group-item">
                             <a href="#" class="icon-link">
@@ -20,7 +19,6 @@
                             <router-link tag="a" to="/phu-kien"
                                 >Phụ kiện
                             </router-link>
-                            <i class="icon-right fas fa-chevron-right"></i>
                         </li>
                         <li class="list-group-item">
                             <a href="#" class="icon-link">
@@ -29,7 +27,6 @@
                             <router-link tag="a" to="/tablet"
                                 >Tablet
                             </router-link>
-                            <i class="icon-right fas fa-chevron-right"></i>
                         </li>
                         <li class="list-group-item">
                             <a href="#" class="icon-link">
@@ -38,7 +35,6 @@
                             <router-link tag="a" to="/laptop"
                                 >Laptop
                             </router-link>
-                            <i class="icon-right fas fa-chevron-right"></i>
                         </li>
                         <li class="list-group-item">
                             <a href="#" class="icon-link">
