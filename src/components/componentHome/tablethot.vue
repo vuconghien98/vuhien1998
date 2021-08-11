@@ -5,7 +5,7 @@
             class="row d-flex justify-content-between"
             style="border-bottom: 2px solid #f60"
         >
-            <div class="col-12 col-lg text-head">
+            <div class="col-12 col-lg-3 text-head">
                 <a href="" class="position-relative">TABLET NỔI BẬT NHẤT</a>
             </div>
             <div class="list">

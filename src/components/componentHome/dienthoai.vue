@@ -2,7 +2,7 @@
     <div class="col-12 w-100">
         <!-- Title mở đầu -->
         <div class="row d-flex justify-content-between" style="border-bottom: 2px solid #f60">
-            <div class="col-12 col-lg text-head">
+            <div class="col-12 col-lg-2 text-head">
                 <a href="" class="position-relative">ĐIỆN THOẠI NỔI BẬT NHẤT</a>
             </div>
             <div class="list">
