@@ -59,7 +59,6 @@
                             <router-link tag="a" to="/gia-dung"
                                 >Gia dụng thông minh
                             </router-link>
-                            <i class="icon-right fas fa-chevron-right"></i>
                         </li>
                         <li class="list-group-item">
                             <a href="#" class="icon-link">
