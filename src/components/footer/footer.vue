@@ -38,10 +38,11 @@
         </div>
         <div class="col-12 d-lg-none text-center">
           <button class="button"
-            @click="hiden = !hiden">Mở rộng chân trang</button>
+            @click="hiden = !hiden"><a v-if="!hiden">Mở rộng chân trang</a>
+            <a v-else>Thu gọn chân trang</a></button>
         </div>
-        <div class="col-12 col-lg-9 d-flex justify-content-around contact-1"
-        v-if="hiden">
+        <div class="col-12 col-lg-9 d-lg-flex justify-content-around contact-1"
+        v-show="hiden">
         <div class="col-lg-4">
           <h3>Thông tin khác</h3>
           <ul>
@@ -133,7 +134,7 @@
 export default {
   data() {
     return{
-      hiden: true
+      hiden: false
     }
   },
 }
