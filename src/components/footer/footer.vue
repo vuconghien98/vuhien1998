@@ -42,7 +42,7 @@
         </div>
         <div class="col-12 col-lg-9 d-flex justify-content-around contact-1"
         v-if="hiden">
-        <div class="div contac-3">
+        <div class="col-lg-4">
           <h3>Thông tin khác</h3>
           <ul>
             <li>
@@ -68,7 +68,7 @@
             </li> 
           </ul>
       </div>
-      <div class="div contac-3">
+      <div class="col-lg-4">
           <h3>Hỗ trợ khách hàng</h3>
           <ul>
             <li>
@@ -94,7 +94,7 @@
             </li> 
           </ul>
       </div>
-      <div class="div contac-3">
+      <div class="col-lg-4">
         <div class="row">
           <div class="col-12">
           <h3>Gọi tư vấn & khiếu nại</h3>
@@ -150,10 +150,6 @@ export default {
   }
   .button{
     font-size: 13px;
-  }
-  .contact-3{
-    display: flex;
-    flex-direction: column;
   }
   .contact .icon {
     flex-wrap: wrap;
