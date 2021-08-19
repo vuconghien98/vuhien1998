@@ -18,9 +18,9 @@
         </div>
         <!-- Tablet -->
         <div class="row">
-            <div class="col-12 d-flex w-100 item-lag">
+            <div class="d-flex item-lag">
                 <div
-                    class="col-6 col-md-4 col-lg position-relative p-3 mb-3 item col"
+                    class="col-6 col-md-4 colLg2 position-relative p-3 mb-3 item col"
                     v-for="(data, i) in datas"
                     :key="i"
                 >
@@ -76,58 +76,21 @@
     </div>
 </template>
 <script>
+import axios from 'axios'
+
 export default {
     data() {
         return {
-            datas: [
-                {
-                    img: 'homeTablet/ipad.png',
-                    sale: '300.000đ',
-                    gift: '/hop-qua.svg',
-                    content:
-                        'iPad Gen 8 10.2″ 2020 32GB Wi-Fi Chính hãng Apple Việt Nam',
-                    oldPrince: '9.290.000đ',
-                    newPrince: '8.990.000đ',
-                },
-                {
-                    img: 'homeTablet/ipad.png',
-                    sale: '300.000đ',
-                    gift: '/hop-qua.svg',
-                    content:
-                        'iPad Gen 8 10.2″ 2020 32GB Wi-Fi Chính hãng Apple Việt Nam',
-                    oldPrince: '9.290.000đ',
-                    newPrince: '8.990.000đ',
-                },
-                {
-                    img: 'homeTablet/ipad.png',
-                    sale: '300.000đ',
-                    gift: '/hop-qua.svg',
-                    content:
-                        'iPad Gen 8 10.2″ 2020 32GB Wi-Fi Chính hãng Apple Việt Nam',
-                    oldPrince: '9.290.000đ',
-                    newPrince: '8.990.000đ',
-                },
-                {
-                    img: 'homeTablet/ipad.png',
-                    sale: '300.000đ',
-                    gift: '/hop-qua.svg',
-                    content:
-                        'iPad Gen 8 10.2″ 2020 32GB Wi-Fi Chính hãng Apple Việt Nam',
-                    oldPrince: '9.290.000đ',
-                    newPrince: '8.990.000đ',
-                },
-                {
-                    img: 'homeTablet/ipad.png',
-                    sale: '300.000đ',
-                    gift: '/hop-qua.svg',
-                    content:
-                        'iPad Gen 8 10.2″ 2020 32GB Wi-Fi Chính hãng Apple Việt Nam',
-                    oldPrince: '9.290.000đ',
-                    newPrince: '8.990.000đ',
-                },
-            ],
+            datas: [],
         }
     },
+    created() {
+    axios.get('http://localhost:3000/tablet')
+    .then(response => {
+      this.datas = response.data
+      console.log(this.datas)
+    })
+  }
 }
 </script>
 
@@ -184,6 +147,12 @@ export default {
 }
 /*  */
 /* Css sản phẩm */
+@media (min-width: 992px) {
+    .colLg2{
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
 @media (max-width: 991px){
   .item-lag{
     overflow: scroll hidden;

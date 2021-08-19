@@ -69,7 +69,7 @@
                             </router-link>
                         </li>
                     </ul>
-                </div>  
+                </div>
                 <div class="col-12 col-lg-7 p-0 sliderr">
                     <div class="slider_img d-flex">
                         <div class="swiper-container">
@@ -97,69 +97,61 @@
                     </button>
                 </div>
                 <div class="col-12 d-lg-none list-mobile">
-                    <div class="boder d-flex" >
-                      <router-link class="link" tag="a"
-                      to="/dien-thoai">
-                        <div class="icon">
-                          <i class="fas fa-mobile"></i>
-                        </div>
-                        <div class="text">Điện thoại</div>
-                      </router-link>
-                      <router-link class="link" tag="a"
-                      to="/dien-thoai">
-                        <div class="icon">
-                          <i class="fas fa-keyboard"></i>
-                        </div>
-                        <div class="text">Phụ kiện</div>
-                      </router-link>
-                      <router-link class="link" tag="a"
-                      to="/dien-thoai">
-                        <div class="icon">
-                          <i class="fas fa-tablet"></i>
-                        </div>
-                        <div class="text">Tablet</div>
-                      </router-link>
-                      <router-link class="link" tag="a"
-                      to="/dien-thoai">
-                        <div class="icon">
-                          <i class="fas fa-laptop"></i>
-                        </div>
-                        <div class="text">Laptop</div>
-                      </router-link>
-                      <router-link class="link" tag="a"
-                      to="/dien-thoai">
-                        <div class="icon">
-                          <i class="fas fa-headphones"></i>
-                        </div>
-                        <div class="text">Âm thanh</div>
-                      </router-link>
-                      <router-link class="link" tag="a"
-                      to="/dien-thoai">
-                        <div class="icon">
-                          <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="text">Smartwatch</div>
-                      </router-link>
-                      <router-link class="link" tag="a"
-                      to="/dien-thoai">
-                        <div class="icon">
-                          <i class="fas fa-home"></i>
-                        </div>
-                        <div class="text">Gia dụng</div>
-                      </router-link>
-                      <router-link class="link" tag="a"
-                      to="/dien-thoai">
-                        <div class="icon">
-                          <i class="fab fa-instalod"></i>
-                        </div>
-                        <div class="text">Xả kho</div>
-                      </router-link>  
+                    <div class="boder d-flex">
+                        <router-link class="link" tag="a" to="/dien-thoai">
+                            <div class="icon">
+                                <i class="fas fa-mobile"></i>
+                            </div>
+                            <div class="text">Điện thoại</div>
+                        </router-link>
+                        <router-link class="link" tag="a" to="/dien-thoai">
+                            <div class="icon">
+                                <i class="fas fa-keyboard"></i>
+                            </div>
+                            <div class="text">Phụ kiện</div>
+                        </router-link>
+                        <router-link class="link" tag="a" to="/dien-thoai">
+                            <div class="icon">
+                                <i class="fas fa-tablet"></i>
+                            </div>
+                            <div class="text">Tablet</div>
+                        </router-link>
+                        <router-link class="link" tag="a" to="/dien-thoai">
+                            <div class="icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <div class="text">Laptop</div>
+                        </router-link>
+                        <router-link class="link" tag="a" to="/dien-thoai">
+                            <div class="icon">
+                                <i class="fas fa-headphones"></i>
+                            </div>
+                            <div class="text">Âm thanh</div>
+                        </router-link>
+                        <router-link class="link" tag="a" to="/dien-thoai">
+                            <div class="icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="text">Smartwatch</div>
+                        </router-link>
+                        <router-link class="link" tag="a" to="/dien-thoai">
+                            <div class="icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="text">Gia dụng</div>
+                        </router-link>
+                        <router-link class="link" tag="a" to="/dien-thoai">
+                            <div class="icon">
+                                <i class="fab fa-instalod"></i>
+                            </div>
+                            <div class="text">Xả kho</div>
+                        </router-link>
                     </div>
                 </div>
                 <div class="col pr-0 pl-2 d-none d-lg-block">
                     <div
                         class="d-flex flex-column"
-                        v-for="(v,i) in sliders"
+                        v-for="(v, i) in sliders"
                         :key="i"
                     >
                         <img :src="v.src" alt="" class="img-sliders" />
@@ -219,13 +211,13 @@
                 <phone-home />
             </div>
             <div class="row mt-3 mb-3 bg-white">
-                <phu-kien-hot/>
+                <phu-kien-hot />
             </div>
             <div class="row mt-3 mb-3 bg-white">
-                <dong-ho-hot/>
+                <dong-ho-hot />
             </div>
             <div class="row mt-3 mb-3 bg-white">
-                <tablet-hot/>
+                <tablet-hot />
             </div>
             <div class="row">
                 <div class="col">
@@ -235,14 +227,14 @@
                                 src="/banner_3.jpg"
                                 alt=""
                                 style="width: 100%"
-                                />
+                            />
                             <div class="middle"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row mt-3 bg-white">
-                <cong-nghe/>
+                <cong-nghe />
             </div>
         </div>
     </div>
@@ -266,7 +258,7 @@ export default {
         PhuKienHot,
         DongHoHot,
         TabletHot,
-        CongNghe
+        CongNghe,
     },
     data() {
         return {
@@ -326,61 +318,61 @@ export default {
 </script>
 
 <style scoped>
-@media (max-width: 575px){
-    .sliderr button{
+@media (max-width: 575px) {
+    .sliderr button {
         display: none;
     }
-    .content-1{
-      text-align: center;
+    .content-1 {
+        text-align: center;
     }
 }
-@media (max-width: 991px){
-    .list-links{
+@media (max-width: 991px) {
+    .list-links {
         display: none;
     }
-    .sliderr img{
+    .sliderr img {
         width: inherit;
         height: inherit;
     }
-    .list-mobile{
-      width: 80px;
-      padding: 0;
-      overflow: scroll hidden;
-     overflow-x: scroll !important;
+    .list-mobile {
+        width: 80px;
+        padding: 0;
+        overflow: scroll hidden;
+        overflow-x: scroll !important;
     }
-    .boder{
-      flex-basis: unset;
-      padding: 5px;
-      width: auto;
-      margin-bottom: 10px;
-      border: none;
+    .boder {
+        flex-basis: unset;
+        padding: 5px;
+        width: auto;
+        margin-bottom: 10px;
+        border: none;
     }
-    .link{
-      display: block;
-      text-align: center;
-      padding-left: 10px;
-      text-decoration: none;
+    .link {
+        display: block;
+        text-align: center;
+        padding-left: 10px;
+        text-decoration: none;
     }
-    .link .icon{
-      border-radius: 50%;
-      border: 1px solid #dee2e6;
-      display: inline-flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 70px;
-      height: 70px;
-      margin-bottom: 0;
+    .link .icon {
+        border-radius: 50%;
+        border: 1px solid #dee2e6;
+        display: inline-flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 0;
     }
     .link .icon i {
-      font-size: 40px;
-      color: #f60;
+        font-size: 40px;
+        color: #f60;
     }
-    .link .text{
-      color: #000;
-      font-size: 14px;
+    .link .text {
+        color: #000;
+        font-size: 14px;
     }
 }
 
@@ -431,7 +423,7 @@ export default {
     background: #fff;
     border-color: transparent rgba(255, 255, 255, 0.25) transparent transparent;
     font-weight: 400;
-		outline: none;
+    outline: none;
 }
 .namebtn:hover {
     border-top: 3px solid #f60;
@@ -493,8 +485,8 @@ export default {
     width: 50%;
     opacity: 1;
 }
-.banner:hover{
-    opacity: .8;
+.banner:hover {
+    opacity: 0.8;
     cursor: pointer;
 }
 .banner3 {
@@ -502,24 +494,24 @@ export default {
     width: 100%;
     opacity: 1;
 }
-.banner3:hover{
-    opacity: .8;
+.banner3:hover {
+    opacity: 0.8;
     cursor: pointer;
 }
 
 .image {
     padding-right: 10px;
 }
-.image2{
+.image2 {
     padding-left: 10px;
 }
-.middle{
+.middle {
     opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
 }
-.middle:hover{
+.middle:hover {
     opacity: 1;
 }
 </style>

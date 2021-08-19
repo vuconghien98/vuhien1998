@@ -10,9 +10,9 @@
             </div>
         </div>  
         <div class="row">
-            <div class="col-12 d-flex w-100 item-lag">
+            <div class="d-flex item-lag">
                 <div
-                    class="col-6 col-md-4 col-lg position-relative p-3 mb-3 item col"
+                    class="col-6 col-md-4 colLg2 position-relative p-3 mb-3 item col"
                     v-for="(data,i) in datas"
                     :key="i"
                 >
@@ -117,6 +117,12 @@ export default {
 }
 
 /* Css sản phẩm */
+@media (min-width: 992px) {
+    .colLg2{
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
 @media (max-width: 991px){
   .item-lag{
           overflow: scroll hidden;

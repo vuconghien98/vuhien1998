@@ -1,7 +1,10 @@
 <template>
     <div class="col-12 w-100">
         <!-- Title mở đầu -->
-        <div class="row d-flex justify-content-between" style="border-bottom: 2px solid #f60">
+        <div
+            class="row d-flex justify-content-between"
+            style="border-bottom: 2px solid #f60"
+        >
             <div class="col-12 col-lg-2 text-head">
                 <a href="" class="position-relative">ĐIỆN THOẠI NỔI BẬT NHẤT</a>
             </div>
@@ -24,10 +27,17 @@
             </div>
         </div>
         <!-- Điện thoại -->
-        <div class="row ">
-            <div class="col-12 d-flex w-100 item-lag">
-                <div
-                    class="col-6 col-md-4 col-lg position-relative p-3 mb-3 item col"
+        <div class="row">
+                <div class="item-lag d-flex">
+                    <div
+                    class=" 
+                        col-6 col-md-4 colLg2
+                        position-relative
+                        p-3
+                        mb-3
+                        item
+                        col
+                    "
                     v-for="(data, i) in datas"
                     :key="i"
                 >
@@ -45,9 +55,18 @@
                         <img
                             :src="data.img"
                             alt=""
-                            class="mw-100 h-100 m-auto   position-absolute img-big"
+                            class="
+                                mw-100
+                                h-100
+                                m-auto
+                                position-absolute
+                                img-big
+                            "
                         />
-                        <span class="position-absolute w-auto" style="z-index: 1;">
+                        <span
+                            class="position-absolute w-auto"
+                            style="z-index: 1"
+                        >
                             <img
                                 src="/firewall_icon.svg"
                                 alt=""
@@ -55,8 +74,12 @@
                             />
                             {{ data.sale }}
                         </span>
-                        <img :src="data.gift" 
-                            v-if="data.gift !== ''" alt="" class="img-qua" />
+                        <img
+                            :src="data.gift"
+                            v-if="data.gift !== ''"
+                            alt=""
+                            class="img-qua"
+                        />
                     </a>
                     <a href="#" class="text-sp">{{ data.content }}</a>
                     <div class="prince position-relative mb-2">
@@ -68,133 +91,106 @@
                         <a href="" class="btn-b">Yêu thích</a>
                     </div>
                 </div>
-            </div>
+                </div>
         </div>
     </div>
 </template>
 <script>
-    export default {  
-        data(){
-            return{
-                datas: [
-                {
-                    img: 'homeDThoai/poco.png',
-                    sale: '',
-                    gift: '',
-                    content: 'POCO X3 Pro 6G/128GB Chính Hãng',
-                    oldPrince: '',
-                    newPrince: '8.590.000đ',
-                },
-                {
-                    img: 'homeDThoai/xiaomi.png',
-                    sale: 'Giảm 1.000.000đ',
-                    gift: 'hop-qua.svg',
-                    content: 'Xiaomi Redmi Note 10s 8GB/128GB Chính Hãng DGW',
-                    oldPrince: '6.490.000đ',
-                    newPrince: '5.490.000đ',
-                },
-                {
-                    img: 'homeDThoai/iphone-12.png',
-                    sale: 'Giảm 5.700.000đ',
-                    gift: 'hop-qua.svg',
-                    content: 'iPhone 12 Pro Max 128GB Chính Hãng VN/A',
-                    oldPrince: '33.990.000đ',
-                    newPrince: '28.290.000đ',
-                },
-                {
-                    img: 'homeDThoai/iphone-xr.png',
-                    sale: 'Giảm 4.800.000đ',
-                    gift: '',
-                    content: 'iPhone XR 64Gb Chính Hãng VN/A (Phiên Bản Hộp Mới)',
-                    oldPrince: '15.790.000đ',
-                    newPrince: '10.990.000đ',
-                },
-                {
-                    img: 'homeDThoai/realme.png',
-                    sale: 'Giảm 800.000đ',
-                    gift: 'hop-qua.svg',
-                    content: 'Realme 8 8GB/128GB Chính Hãng',
-                    oldPrince: '7.290.000đ',
-                    newPrince: '6.490.000đ',
-                },
-            ],
-            }
-        }  
-    }
-</script>
-<style scoped>
-/* Title mở đầu */
-    .text-head{
-        position: relative;
-        font-size: 16px;
-        height: 48px;
-        font-weight: 500;
-        background: #f60;
-        padding: 0 15px 0 10px;
-    }
-    .text-head:hover a{
-        color: #12df3a;
-    }
-    .text-head::before{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 23px;
-        right: -23px;
-        content: "";
-        background-color: inherit;
-        transform: skew(23deg);
-    }
-    .text-head a {
-        text-decoration: none;
-        color: #fff;
-        line-height: 48px;
-    }
-    .list ul{
-        align-items: center;
-        margin: 0;
-        height: 100%;
+import axios from 'axios'
 
-    }
-    .list ul li{
-        font-size: 14px;
-        font-weight: 500;
-        list-style: none;
-        padding: 0 8px 0 8px;
-        display: inline-block;
-    }   
-    .list ul li:hover{
-        cursor: pointer;
-        color: #12df3a;
-    }
-    .list ul li:last-child{
-        color: #12df3a;
-    }
-    .list ul li:last-child:hover{
-        color: #f60;
-        transition: ease-in .5s;
-    }
-    /*  */
+export default {
+    data() {
+        return {
+            datas: [],
+        }
+    },
+    created() {
+    axios.get('http://localhost:3000/dienthoai')
+    .then(response => {
+      this.datas = response.data
+      console.log(this.datas)
+    })
+  }
+}
+</script>
+<style scoped>  
+/* Title mở đầu */
+.text-head {
+    position: relative;
+    font-size: 16px;
+    height: 48px;
+    font-weight: 500;
+    background: #f60;
+    padding: 0 15px 0 10px;
+}
+.text-head:hover a {
+    color: #12df3a;
+}
+.text-head::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 23px;
+    right: -23px;
+    content: '';
+    background-color: inherit;
+    transform: skew(23deg);
+}
+.text-head a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 48px;
+}
+.list ul {
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+.list ul li {
+    font-size: 14px;
+    font-weight: 500;
+    list-style: none;
+    padding: 0 8px 0 8px;
+    display: inline-block;
+}
+.list ul li:hover {
+    cursor: pointer;
+    color: #12df3a;
+}
+.list ul li:last-child {
+    color: #12df3a;
+}
+.list ul li:last-child:hover {
+    color: #f60;
+    transition: ease-in 0.5s;
+}
+/*  */
 /* Css sản phẩm */
-@media (max-width: 991px){
-  .item-lag{
-    overflow: scroll hidden;
-     overflow-x: scroll !important;
-    }  
-    .text-head{
+@media (min-width: 992px) {
+    .colLg2{
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (max-width: 991px) {
+    .item-lag {
+        overflow: scroll hidden;
+        overflow-x: scroll !important;
+    }
+    .text-head {
         text-align: center;
     }
-    .text-head::before{
+    .text-head::before {
         display: none;
     }
-    .list{
-     overflow: scroll hidden;
-     overflow-x: scroll !important;   
+    .list {
+        overflow: scroll hidden;
+        overflow-x: scroll !important;
     }
-    .list ul{
+    .list ul {
         padding: 0;
     }
-    .list > ul > li:last-child{
+    .list > ul > li:last-child {
         display: none;
     }
 }
@@ -249,7 +245,7 @@
     position: relative;
     min-height: 38.4px;
 }
-.text-sp:hover{
+.text-sp:hover {
     color: #f60;
 }
 .new-prince {
@@ -300,8 +296,8 @@
 .button .btn-b:hover {
     background: #6c757d;
 }
-.item:hover::before{
-    content: "";
+.item:hover::before {
+    content: '';
     position: absolute;
     top: 0;
     right: 0;

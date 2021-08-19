@@ -21,9 +21,9 @@
         </div>
         <!-- Đồng Hồ -->
         <div class="row">
-            <div class="col-12 d-flex w-100 item-lag">
+            <div class="d-flex item-lag">
                 <div
-                    class="col-6 col-md-4 col-lg position-relative p-3 mb-3 item col"
+                    class="col-6 col-md-4 colLg2 position-relative p-3 mb-3 item col"
                     v-for="(data, i) in datas"
                     :key="i"
                 >
@@ -79,58 +79,21 @@
     </div>
 </template>
 <script>
+import axios from 'axios'
+
 export default {
     data() {
         return {
-            datas: [
-                {
-                    img: 'homeDongHo/apple-watch.png',
-                    sale: '2.800.000đ',
-                    gift: '',
-                    content:
-                        'Apple Watch SE 40mm GPS - Viền nhôm dây cao su – Chính hãng VN/A',
-                    oldPrince: '8.990.000đ',
-                    newPrince: '6.190.000đ',
-                },
-                {
-                    img: 'homeDongHo/apple-watch.png',
-                    sale: '2.800.000đ',
-                    gift: '',
-                    content:
-                        'Apple Watch SE 40mm GPS - Viền nhôm dây cao su – Chính hãng VN/A',
-                    oldPrince: '8.990.000đ',
-                    newPrince: '6.190.000đ',
-                },
-                {
-                    img: 'homeDongHo/apple-watch.png',
-                    sale: '2.800.000đ',
-                    gift: '',
-                    content:
-                        'Apple Watch SE 40mm GPS - Viền nhôm dây cao su – Chính hãng VN/A',
-                    oldPrince: '8.990.000đ',
-                    newPrince: '6.190.000đ',
-                },
-                {
-                    img: 'homeDongHo/apple-watch.png',
-                    sale: '2.800.000đ',
-                    gift: '',
-                    content:
-                        'Apple Watch SE 40mm GPS - Viền nhôm dây cao su – Chính hãng VN/A',
-                    oldPrince: '8.990.000đ',
-                    newPrince: '6.190.000đ',
-                },
-                {
-                    img: 'homeDongHo/apple-watch.png',
-                    sale: '2.800.000đ',
-                    gift: '',
-                    content:
-                        'Apple Watch SE 40mm GPS - Viền nhôm dây cao su – Chính hãng VN/A',
-                    oldPrince: '8.990.000đ',
-                    newPrince: '6.190.000đ',
-                },
-            ],
+            datas: [],
         }
     },
+    created() {
+    axios.get('http://localhost:3000/watch')
+    .then(response => {
+      this.datas = response.data
+      console.log(this.datas)
+    })
+  }
 }
 </script>
 
@@ -187,6 +150,12 @@ export default {
 }
 /*  */
 /* Css sản phẩm */
+@media (min-width: 992px) {
+    .colLg2{
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
 @media (max-width: 991px){
   .item-lag{
     overflow: scroll hidden;

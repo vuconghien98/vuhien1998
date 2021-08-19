@@ -21,9 +21,9 @@
         </div>
         <!-- Phụ Kiện -->
         <div class="row">
-            <div class="col-12 d-flex w-100 item-lag">
+            <div class="d-flex item-lag">
                 <div
-                    class="col-6 col-md-4 col-lg position-relative p-3 mb-3 item col"
+                    class="col-6 col-md-4 colLg2 position-relative p-3 mb-3 item col"
                     v-for="(data, i) in datas"
                     :key="i"
                 >
@@ -72,59 +72,23 @@
         </div>
     </div>
 </template>
+
 <script>
+import axios from 'axios'
+
 export default {
     data() {
         return {
-            datas: [
-                {
-                    img: 'homePhuKien/tai-nghe.png',
-                    sale: '400.000đ',
-                    gift: '',
-                    content:
-                        'Tai nghe Bluetooth True Wireless Huawei FreeBuds 4i Chính hãng',
-                    oldPrince: '1.990.000đ',
-                    newPrince: '1.590.000đ',
-                },
-                {
-                    img: 'homePhuKien/tai-nghe.png',
-                    sale: '400.000đ',
-                    gift: '',
-                    content:
-                        'Tai nghe Bluetooth True Wireless Huawei FreeBuds 4i Chính hãng',
-                    oldPrince: '1.990.000đ',
-                    newPrince: '1.590.000đ',
-                },
-                {
-                    img: 'homePhuKien/tai-nghe.png',
-                    sale: '400.000đ',
-                    gift: '',
-                    content:
-                        'Tai nghe Bluetooth True Wireless Huawei FreeBuds 4i Chính hãng',
-                    oldPrince: '1.990.000đ',
-                    newPrince: '1.590.000đ',
-                },
-                {
-                    img: 'homePhuKien/tai-nghe.png',
-                    sale: '400.000đ',
-                    gift: '',
-                    content:
-                        'Tai nghe Bluetooth True Wireless Huawei FreeBuds 4i Chính hãng',
-                    oldPrince: '1.990.000đ',
-                    newPrince: '1.590.000đ',
-                },
-                {
-                    img: 'homePhuKien/tai-nghe.png',
-                    sale: '400.000đ',
-                    gift: '',
-                    content:
-                        'Tai nghe Bluetooth True Wireless Huawei FreeBuds 4i Chính hãng',
-                    oldPrince: '1.990.000đ',
-                    newPrince: '1.590.000đ',
-                },
-            ],
+            datas: [],
         }
     },
+    created() {
+    axios.get('http://localhost:3000/phukien')
+    .then(response => {
+      this.datas = response.data
+      console.log(this.datas)
+    })
+  }
 }
 </script>
 
@@ -181,6 +145,12 @@ export default {
 }
 /*  */
 /* Css sản phẩm */
+@media (min-width: 992px) {
+    .colLg2{
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
 @media (max-width: 991px){
   .item-lag{
     overflow: scroll hidden;
