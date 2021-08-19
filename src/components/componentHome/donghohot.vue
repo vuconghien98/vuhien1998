@@ -88,7 +88,7 @@ export default {
         }
     },
     created() {
-    axios.get('http://localhost:3000/watch')
+    axios.get('http://localhost:3000/watch?_limit=5')
     .then(response => {
       this.datas = response.data
       console.log(this.datas)

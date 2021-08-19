@@ -105,7 +105,7 @@ export default {
         }
     },
     created() {
-    axios.get('http://localhost:3000/dienthoai')
+    axios.get('http://localhost:3000/dienthoai?_limit=5')
     .then(response => {
       this.datas = response.data
       console.log(this.datas)

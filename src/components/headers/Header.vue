@@ -6,7 +6,8 @@
         >
             <img src="/header/1.png" alt="" />
         </div>
-        <div class="header"
+        <div
+            class="header"
             :class="{ classFix: scrollPosition > 50 }"
             style="background-color: #f60; height: 60px"
         >
@@ -170,13 +171,7 @@
                         </div>
                     </div>
                     <div class="col-2 col-lg-5 m-auto d-flex cart1">
-                        <div
-                            class="pr-2 header-hiden d-none d-lg-flex"
-                            style="
-                                border-right: 1px solid rgba(255, 255, 255, 0.25);
-                                align-self: center;
-                            "
-                        >
+                        <div class="pr-2 header-hiden d-none d-lg-flex">
                             <i
                                 class="far fa-newspaper pr-2"
                                 style="
@@ -195,12 +190,7 @@
                             </a>
                         </div>
                         <div
-                            class="pl-1 pr-1 header-hiden d-none d-lg-flex"
-                            style="
-                                border-right: 1px solid rgba(255, 255, 255, 0.25);
-                                align-self: center;
-                            "
-                        >
+                            class="pl-1 pr-1 header-hiden d-none d-lg-flex">
                             <i
                                 class="fas fa-phone-volume pr-1"
                                 style="
@@ -224,12 +214,7 @@
                             </a>
                         </div>
                         <div
-                            class=" pl-1 pr-1 header-hiden d-none d-lg-flex"
-                            style="
-                                border-right: 1px solid rgba(255, 255, 255, 0.25);
-                                align-self: center;
-                            "
-                        >
+                            class="pl-1 pr-1 header-hiden d-none d-lg-flex">
                             <i
                                 class="fas fa-map-marker-alt pr-1"
                                 style="
@@ -252,8 +237,10 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="d-lg-flex pr-1 pl-1 cart"
-                        @click="apper = !apper">
+                        <div
+                            class="d-lg-flex pr-1 pl-1 cart"
+                            @click="apper = !apper"
+                        >
                             <i
                                 class="fas fa-shopping-cart pr-1"
                                 style="
@@ -263,15 +250,14 @@
                                     line-height: 40px;
                                 "
                             ></i>
-                            <a  
-                                
+                            <a
                                 class="
-                                    text-decoration-none text-white text-center d-none d-lg-flex
+                                    text-decoration-none text-white text-center
+                                    d-none d-lg-flex
                                 "
                                 style="font-size: 14px"
-                                >
-                                <span style="cursor:pointer"
-                                >
+                            >
+                                <span style="cursor: pointer">
                                     <span
                                         class="d-block rounded-circle ml-2"
                                         style="
@@ -289,31 +275,29 @@
                 </div>
             </div>
         </div>
-        <transition appper
-                    enter-active-class="animate__animated animate__fadeInRight"
-                    leave-active-class="animate__animated animate__fadeOutRight">
-          <div class="market" v-if="apper">
-            <div class="market-header">
-                <div class="d-flex justify-content-between">
-                    <h3>GIỎ HÀNG</h3>
-                    <div class="click"
-                    @click="apper = !apper"
-                    >
-                        <i class="fas fa-times"></i>
+        <transition
+            appper
+            enter-active-class="animate__animated animate__fadeInRight"
+            leave-active-class="animate__animated animate__fadeOutRight"
+        >
+            <div class="market" v-if="apper">
+                <div class="market-header">
+                    <div class="d-flex justify-content-between">
+                        <h3>GIỎ HÀNG</h3>
+                        <div class="click" @click="apper = !apper">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <i class="fas fa-store-alt"></i>
+                        <button type="button" class="btn btn-lg">
+                            Tiếp tục mua hàng
+                        </button>
                     </div>
                 </div>
-                <div class="content">
-                    <i class="fas fa-store-alt"></i>
-                    <button type="button" class="btn btn-lg">
-                        Tiếp tục mua hàng
-                    </button>
-                </div>
             </div>
-        </div>
         </transition>
-        <div class="overlay"
-        @click="apper = !apper" 
-        v-if="apper"></div>
+        <div class="overlay" @click="apper = !apper" v-if="apper"></div>
     </div>
 </template>
 <script>
@@ -353,9 +337,9 @@ export default {
 .btn_search i:hover {
     color: #12df3a !important;
 }
-.apper{
-  transform: translateX(100%);
-  display: none;
+.apper {
+    transform: translateX(100%);
+    display: none;
 }
 .market {
     width: 25%;
@@ -367,7 +351,7 @@ export default {
     z-index: 100;
     transform: translateX(0);
 }
-.click{
+.click {
     position: absolute;
     margin-left: 0;
     right: 15px;
@@ -375,17 +359,21 @@ export default {
     line-height: 0;
     border: none;
     cursor: pointer;
-    transition: 0.4s ease-in-out, 0.4s ease-in-out
+    transition: 0.4s ease-in-out, 0.4s ease-in-out;
 }
 .click i {
     font-size: 22px;
 }
 .click:hover {
     transform: translate(0%, 0%) rotate(360deg);
-    color: #f60
+    color: #f60;
 }
 .market-header {
     padding: 10px;
+}
+.header-hiden {
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    align-self: center;
 }
 .market .market-header h3 {
     font-size: 18px;
@@ -419,50 +407,48 @@ export default {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 6;
 }
-@media (max-width: 1200px){
-  .market{
-    width: 35%;
-  }
+@media (max-width: 1200px) {
+    .market {
+        width: 35%;
+    }
 }
 
 @media (max-width: 991px) {
     .img-header {
         display: none;
     }
-    .header{
+    .header {
         min-height: 100px;
     }
-    .header-container{
+    .header-container {
         min-height: 100px;
     }
-    .header-logo{
+    .header-logo {
         min-height: 100px;
     }
-    .classFix{
+    .classFix {
         position: relative;
     }
-    .header-icon{
+    .header-icon {
         text-align: center;
         position: relative;
         margin-bottom: 2px;
     }
-    .cart1{
+    .cart1 {
         position: absolute;
         top: 0;
         right: 0;
         padding: 0;
         text-align: center;
         float: right;
-
     }
-    .market{
+    .market {
         width: 50%;
     }
-@media (max-width: 575px){
-  .market{
-    width: 75%;
-  }
-}
-
+    @media (max-width: 575px) {
+        .market {
+            width: 75%;
+        }
+    }
 }
 </style>

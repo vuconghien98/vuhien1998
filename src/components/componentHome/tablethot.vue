@@ -85,7 +85,7 @@ export default {
         }
     },
     created() {
-    axios.get('http://localhost:3000/tablet')
+    axios.get('http://localhost:3000/tablet?_limit=5')
     .then(response => {
       this.datas = response.data
       console.log(this.datas)
