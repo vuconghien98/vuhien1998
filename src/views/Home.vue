@@ -104,43 +104,43 @@
                             </div>
                             <div class="text">Điện thoại</div>
                         </router-link>
-                        <router-link class="link" tag="a" to="/dien-thoai">
+                        <router-link class="link" tag="a" to="/phu-kien">
                             <div class="icon">
                                 <i class="fas fa-keyboard"></i>
                             </div>
                             <div class="text">Phụ kiện</div>
                         </router-link>
-                        <router-link class="link" tag="a" to="/dien-thoai">
+                        <router-link class="link" tag="a" to="/tablet">
                             <div class="icon">
                                 <i class="fas fa-tablet"></i>
                             </div>
                             <div class="text">Tablet</div>
                         </router-link>
-                        <router-link class="link" tag="a" to="/dien-thoai">
+                        <router-link class="link" tag="a" to="/laptop">
                             <div class="icon">
                                 <i class="fas fa-laptop"></i>
                             </div>
                             <div class="text">Laptop</div>
                         </router-link>
-                        <router-link class="link" tag="a" to="/dien-thoai">
+                        <router-link class="link" tag="a" to="/am-thanh">
                             <div class="icon">
                                 <i class="fas fa-headphones"></i>
                             </div>
                             <div class="text">Âm thanh</div>
                         </router-link>
-                        <router-link class="link" tag="a" to="/dien-thoai">
+                        <router-link class="link" tag="a" to="/smartwatch">
                             <div class="icon">
                                 <i class="fas fa-clock"></i>
                             </div>
                             <div class="text">Smartwatch</div>
                         </router-link>
-                        <router-link class="link" tag="a" to="/dien-thoai">
+                        <router-link class="link" tag="a" to="/gia-dung">
                             <div class="icon">
                                 <i class="fas fa-home"></i>
                             </div>
                             <div class="text">Gia dụng</div>
                         </router-link>
-                        <router-link class="link" tag="a" to="/dien-thoai">
+                        <router-link class="link" tag="a" to="/xa-kho">
                             <div class="icon">
                                 <i class="fab fa-instalod"></i>
                             </div>
