@@ -9,6 +9,7 @@ import AmThanh from '../components/routerLink/am-thanh.vue'
 import Smartwatch from '../components/routerLink/smartwatch.vue'
 import GiaDung from '../components/routerLink/gia-dung.vue'
 import XaKho from '../components/routerLink/xa-kho.vue'
+import Login from '../components/login/login.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -16,6 +17,11 @@ const routes = [
        path: '/',
        name: 'home',
        component: Home
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
     },
     {
       path: '/dien-thoai',

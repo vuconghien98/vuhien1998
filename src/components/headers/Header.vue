@@ -288,11 +288,18 @@
                             <i class="fas fa-times"></i>
                         </div>
                     </div>
-                    <div class="content">
+                    <div class="content-no-item d-none">
                         <i class="fas fa-store-alt"></i>
                         <button type="button" class="btn btn-lg">
                             Tiếp tục mua hàng
                         </button>
+                    </div>
+                    <div class="">
+                        <div class="content">
+                                <a href="">
+                                  <img src="/homeDThoai/iphone-xr.png" alt="">
+                                </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -378,7 +385,7 @@ export default {
 .market .market-header h3 {
     font-size: 18px;
 }
-.content i {
+.content-no-item i {
     display: block;
     font-size: 150px;
     text-align: center;
@@ -386,13 +393,13 @@ export default {
     margin-top: 50px;
     margin-bottom: 20px;
 }
-.content button {
+.content-no-item button {
     background: #f60;
     margin: 20px 15% 0 25%;
     color: #fff;
     font-size: 16px;
 }
-.content button:hover {
+.content-no-item button:hover {
     background: #cc5200;
 }
 .overlay {
