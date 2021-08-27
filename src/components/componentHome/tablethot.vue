@@ -84,13 +84,14 @@ export default {
             datas: [],
         }
     },
-    created() {
-    axios.get('http://localhost:3000/tablet?_limit=5')
-    .then(response => {
-      this.datas = response.data
-      console.log(this.datas)
-    })
-  }
+        created() {
+        axios.get('http://localhost:3000/alldatas?type=tablet&_limit=5')
+        .then((response) => {
+            this.datas = response.data
+            console.log(this.datas)
+        })
+        .catch(error => console.log(error))
+    },
 }
 </script>
 

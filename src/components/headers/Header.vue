@@ -189,8 +189,7 @@
                                 <b style="display: block">Hot news</b>
                             </a>
                         </div>
-                        <div
-                            class="pl-1 pr-1 header-hiden d-none d-lg-flex">
+                        <div class="pl-1 pr-1 header-hiden d-none d-lg-flex">
                             <i
                                 class="fas fa-phone-volume pr-1"
                                 style="
@@ -213,8 +212,7 @@
                                 </span>
                             </a>
                         </div>
-                        <div
-                            class="pl-1 pr-1 header-hiden d-none d-lg-flex">
+                        <div class="pl-1 pr-1 header-hiden d-none d-lg-flex">
                             <i
                                 class="fas fa-map-marker-alt pr-1"
                                 style="
@@ -296,9 +294,17 @@
                     </div>
                     <div class="">
                         <div class="content">
-                                <a href="">
-                                  <img src="/homeDThoai/iphone-xr.png" alt="">
-                                </a>
+                            <a href="" class="linkk">
+                                <img src="/homeDThoai/iphone-xr.png" alt="" />
+                            </a>
+                            <div class="information">
+                              <div class="text">
+                                iPhone 12 64GB Chính Hãng VN/A - Xanh Mint
+                              </div>
+                              <div class="price">
+                                
+                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>

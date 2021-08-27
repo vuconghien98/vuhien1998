@@ -83,11 +83,12 @@ export default {
         }
     },
     created() {
-    axios.get('http://localhost:3000/phukien?_limit=5')
+    axios.get('http://localhost:3000/alldatas?type=phukien&_limit=5')
     .then(response => {
       this.datas = response.data
       console.log(this.datas)
     })
+    .catch(error => console.log(error))
   }
 }
 </script>

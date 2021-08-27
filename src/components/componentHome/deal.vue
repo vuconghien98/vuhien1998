@@ -58,52 +58,20 @@
     </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
     data() {
         return {
-            datas: [
-                {
-                    img: 'deal/airplus-lite.jpg',
-                    sale: 'Giảm 300.000đ',
-                    gift: 'hop-qua.svg',
-                    content: 'Tai nghe Veger AirPlus Lite-Chính hãng',
-                    oldPrince: '800.000đ',
-                    newPrince: '399.000đ',
-                },
-                {
-                    img: 'deal/tai-nghe.jpg',
-                    sale: 'Giảm 401.000đ',
-                    gift: 'hop-qua.svg',
-                    content: 'Tai nghe Veger AirPlus Pro-Chính hãng',
-                    oldPrince: '999.000đ',
-                    newPrince: '699.000đ',
-                },
-                {
-                    img: 'deal/ipad-air.png',
-                    sale: 'Giảm 700.000đ',
-                    gift: 'hop-qua.svg',
-                    content: 'iPad 4 16GB 4G/Wifi Cũ',
-                    oldPrince: '3.590.000đ',
-                    newPrince: '2.890.000đ',
-                },
-                {
-                    img: 'deal/poco-x3.png   ',
-                    sale: 'Giảm 300.000đ',
-                    gift: '',
-                    content: 'POCO X3 Pro 6G/128GB Chính Hãng',
-                    oldPrince: '6.190.000đ',
-                    newPrince: '5.890.000đ',
-                },
-                {
-                    img: 'deal/ipad1.png',
-                    sale: 'Giảm 400.000đ',
-                    gift: 'hop-qua.svg',
-                    content: 'iPad Air 16Gb Cũ (4G + Wifi) Đẹp như mới',
-                    oldPrince: '4.790.000đ',
-                    newPrince: '4.390.000đ',
-                },
-            ],
+            datas: [],
         }
+    },
+    created() {
+        axios.get('http://localhost:3000/alldatas?deal=true&_limit=5')
+        .then((response) => {
+          this.datas = response.data
+          console.log(this.datas)
+        })
+        .catch(error => console.log(error))
     },
 }
 </script>

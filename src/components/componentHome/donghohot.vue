@@ -88,11 +88,12 @@ export default {
         }
     },
     created() {
-    axios.get('http://localhost:3000/watch?_limit=5')
+    axios.get('http://localhost:3000/alldatas?type=watch&_limit=5')
     .then(response => {
       this.datas = response.data
       console.log(this.datas)
     })
+    .catch(error => console.log(error))
   }
 }
 </script>

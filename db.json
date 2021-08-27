@@ -1,5 +1,5 @@
 {
-  "dienthoai": [
+  "alldatas": [
     {
       "img": "homeDThoai/poco.png",
       "sale": "",
@@ -7,7 +7,9 @@
       "content": "POCO X3 Pro 6G/128GB Chính Hãng",
       "oldPrince": "",
       "newPrince": "8.590.000đ",
-      "id": 3
+      "type": "dienthoai",
+      "deal": false,
+      "id": 1
     },
     {
       "img": "homeDThoai/xiaomi.png",
@@ -16,7 +18,9 @@
       "content": "Xiaomi Redmi Note 10s 8GB/128GB Chính Hãng DGW",
       "oldPrince": "6.490.000đ",
       "newPrince": "5.490.000đ",
-      "id": 4
+      "type": "dienthoai",
+      "deal": false,
+      "id": 2
     },
     {
       "img": "homeDThoai/iphone-12.png",
@@ -25,7 +29,9 @@
       "content": "iPhone 12 Pro Max 128GB Chính Hãng VN/A",
       "oldPrince": "33.990.000đ",
       "newPrince": "28.290.000đ",
-      "id": 5
+      "type": "dienthoai",
+      "deal": false,
+      "id": 3
     },
     {
       "img": "homeDThoai/iphone-xr.png",
@@ -34,7 +40,9 @@
       "content": "iPhone XR 64Gb Chính Hãng VN/A (Phiên Bản Hộp Mới)",
       "oldPrince": "15.790.000đ",
       "newPrince": "10.990.000đ",
-      "id": 6
+      "type": "dienthoai",
+      "deal": true,
+      "id": 4
     },
     {
       "img": "homeDThoai/realme.png",
@@ -43,10 +51,10 @@
       "content": "Realme 8 8GB/128GB Chính Hãng",
       "oldPrince": "7.290.000đ",
       "newPrince": "6.490.000đ",
-      "id": 7
-    }
-  ],
-  "tablet": [
+      "type": "dienthoai",
+      "deal": true,
+      "id": 5
+    },
     {
       "img": "homeTablet/ipad.png",
       "sale": "Giảm 300.000đ",
@@ -54,7 +62,9 @@
       "content": "iPad Gen 8 10.2″ 2020 32GB Wi-Fi Chính hãng Apple Việt Nam",
       "oldPrince": "9.290.000đ",
       "newPrince": "8.990.000đ",
-      "id": 2
+      "type": "tablet",
+      "deal": true,
+      "id": 6
     },
     {
       "img": "homeTablet/ipad2.png",
@@ -63,7 +73,9 @@
       "content": "iPad Gen 8 10.2″ 2020 32GB 4G/Wifi – Chính Hãng Apple Việt Nam",
       "oldPrince": "13.990.000đ",
       "newPrince": "11.790.000đ",
-      "id": 3
+      "type": "tablet",
+      "deal": true,
+      "id": 7
     },
     {
       "img": "homeTablet/ipad3.png",
@@ -72,7 +84,9 @@
       "content": "iiPad Air 4 10.9 64GB Wi-Fi 2020 Chính Hãng Apple Việt Nam",
       "oldPrince": "16.990.000đ",
       "newPrince": "14.690.000đ",
-      "id": 4
+      "type": "tablet",
+      "deal": true,
+      "id": 8
     },
     {
       "img": "homeTablet/ipad4.png",
@@ -81,7 +95,9 @@
       "content": "Máy tính bảng iPad Pro M1 11 128GB Wifi 2021 Chính hãng",
       "oldPrince": "21.990.000đ",
       "newPrince": "20.990.000đ",
-      "id": 5
+      "type": "tablet",
+      "deal": false,
+      "id": 9
     },
     {
       "img": "homeTablet/ipad5.png",
@@ -90,10 +106,10 @@
       "content": "iPad Gen 8 10.2″ 2020 32GB 4G/Wifi – Chính Hãng Apple Việt Nam",
       "oldPrince": "13.990.000đ",
       "newPrince": "11.790.000đ",
-      "id": 6
-    }
-  ],
-  "watch": [
+      "type": "tablet",
+      "deal": false,
+      "id": 10
+    },
     {
       "img": "homeDongHo/watch1.png",
       "sale": "Giảm 2.800.000đ",
@@ -101,7 +117,9 @@
       "content": "Apple Watch SE 40mm GPS - Viền nhôm dây cao su – Chính hãng VN/A",
       "oldPrince": "8.990.000đ",
       "newPrince": "6.190.000đ",
-      "id": 1
+      "type": "watch",
+      "deal": false,
+      "id": 11
     },
     {
       "img": "homeDongHo/watch2.png",
@@ -110,7 +128,9 @@
       "content": "Apple Watch SE 40mm LTE -Viền nhôm dây vải – Chính hãng VN/A",
       "oldPrince": "10.990.000đ",
       "newPrince": "7.990.000đ",
-      "id": 2
+      "type": "watch",
+      "deal": false,
+      "id": 12
     },
     {
       "img": "homeDongHo/watch3.png",
@@ -119,7 +139,9 @@
       "content": "Apple Watch SE 44mm LTE - Viền nhôm dây vải – Chính hãng VN/A",
       "oldPrince": "10.990.000đ",
       "newPrince": "8.790.000đ",
-      "id": 3
+      "type": "watch",
+      "deal": false,
+      "id": 13
     },
     {
       "img": "homeDongHo/watch4.png",
@@ -128,7 +150,9 @@
       "content": "Apple Watch SE 44mm LTE - Viền nhôm dây vải – Chính hãng VN/A",
       "oldPrince": "11.990.000đ",
       "newPrince": "8.690.000đ",
-      "id": 4
+      "type": "watch",
+      "deal": false,
+      "id": 14
     },
     {
       "img": "homeDongHo/watch5.png",
@@ -137,7 +161,9 @@
       "content": "Apple Watch Series 6 40mm GPS - Viền nhôm dây cao su – Chính hãng VN/A",
       "oldPrince": "12.590.000đ",
       "newPrince": "8.790.000đ",
-      "id": 5
+      "type": "watch",
+      "deal": false,
+      "id": 15
     },
     {
       "img": "homeDongHo/watch5.png",
@@ -146,10 +172,10 @@
       "content": "Apple Watch Series 6 40mm GPS - Viền nhôm dây cao su – Chính hãng VN/A",
       "oldPrince": "12.590.000đ",
       "newPrince": "8.790.000đ",
-      "id": 6
-    }
-  ],
-  "phukien": [
+      "type": "watch",
+      "deal": false,
+      "id": 16
+    },
     {
       "img": "homePhuKien/pk1.png",
       "sale": "Giảm 191.000đ",
@@ -157,7 +183,9 @@
       "content": "Pin Sạc Dự Phòng Veger Jerry 10,000Mah Sạc Nhanh PD 20W, QuickCharge 3.0 - Siêu Nhanh, Siêu Gọn, Chống cháy",
       "oldPrince": "690.000đ",
       "newPrince": "499.000đ",
-      "id": 1
+      "type": "phukien",
+      "deal": false,
+      "id": 17
     },
     {
       "img": "homePhuKien/pk2.png",
@@ -166,7 +194,9 @@
       "content": "Tai nghe Bluetooth True Wireless Huawei FreeBuds 4i Chính hãng",
       "oldPrince": "1.990.000đ",
       "newPrince": "1.390.000đ",
-      "id": 2
+      "type": "phukien",
+      "deal": false,
+      "id": 18
     },
     {
       "img": "homePhuKien/pk3.png",
@@ -175,7 +205,9 @@
       "content": "Tai nghe Bluetooth True Wireless Huawei Freebuds Pro Chính Hãng",
       "oldPrince": "3.990.000đ",
       "newPrince": "2.990.000đ",
-      "id": 3
+      "type": "phukien",
+      "deal": false,
+      "id": 19
     },
     {
       "img": "homePhuKien/pk4.png",
@@ -184,7 +216,9 @@
       "content": "Củ Sạc nhanh BWOO CDA68 20W PD sạc nhanh , giá rẻ",
       "oldPrince": "350.000đ",
       "newPrince": "290.000đ",
-      "id": 4
+      "type": "phukien",
+      "deal": false,
+      "id": 20
     },
     {
       "img": "homePhuKien/pk5.png",
@@ -193,7 +227,9 @@
       "content": "Củ Sạc Nhanh Apple Type C 20W PD cho iPhone/iPad MHJE3",
       "oldPrince": "890.000đ",
       "newPrince": "590.000đ",
-      "id": 5
+      "type": "phukien",
+      "deal": false,
+      "id": 21
     }
   ]
 }

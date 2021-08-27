@@ -73,7 +73,11 @@
                             <span class="old-prince">{{ data.oldPrince }}</span>
                         </div>
                         <div class="button">
-                            <a href="" class="btn-a">Chi tiết</a>
+                            <router-link tag="a"
+                            to="`{datas.id}`"
+                            class="btn-a">
+                                Chi tiết
+                            </router-link>
                             <a href="" class="btn-b">Yêu thích</a>
                         </div>
                     </div>
@@ -92,10 +96,12 @@ export default {
         }
     },
     created() {
-        axios.get('http://localhost:3000/dienthoai').then((response) => {
+        axios.get('http://localhost:3000/alldatas?type=dienthoai')
+        .then((response) => {
             this.datas = response.data
             console.log(this.datas)
         })
+        .catch(error => console.log(error))
     },
 }
 </script>

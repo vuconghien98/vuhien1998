@@ -92,10 +92,12 @@ export default {
         }
     },
     created() {
-        axios.get('http://localhost:3000/phukien').then((response) => {
+        axios.get('http://localhost:3000/alldatas?type=phukien')
+        .then((response) => {
             this.datas = response.data
             console.log(this.datas)
         })
+        .catch(error => console.log(error))
     },
 }
 </script>
