@@ -70,7 +70,11 @@
                         <span class="old-prince">{{ data.oldPrince }}</span>
                     </div>
                     <div class="button">
-                        <a href="" class="btn-a">Chi tiết</a>
+                        <router-link tag="a"
+                            :to="{name: 'SanPham',
+                                params: {id: data.id}
+                                    }"
+                            class="btn-a">Chi tiết</router-link>
                         <a href="" class="btn-b">Yêu thích</a>
                     </div>
                 </div>

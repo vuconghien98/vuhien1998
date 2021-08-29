@@ -88,7 +88,9 @@
                     </div>
                     <div class="button">
                         <router-link tag="a"
-                            to="`{datas.id}`"
+                            :to="{name: 'SanPham',
+                                params: {id: data.id}
+                                    }"
                             class="btn-a">
                                 Chi tiết
                             </router-link>
